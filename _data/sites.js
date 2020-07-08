@@ -36,13 +36,15 @@ module.exports = {
 			freshChrome: "run"
 		},
 		urls: [
+			"https://suprasumo.co/",
+			"https://temppo.com/",
 			"https://anaemiliasilva.com/",
 			"https://filhosdelondres.com/",
-			"https://temppo.com/",
-			"https://ilustrique.com/",
+			"https://tidykingdom.com/",
 			"http://milliaoz.com/",
-			"https://suprasumo.co/",
-			"https://mariabaixinha.com/"
+			"https://ilustrique.com/",
+			"https://mariabaixinha.com/",
+			"https://catarinacoelho.pt/"
 		]
 	}
 };
