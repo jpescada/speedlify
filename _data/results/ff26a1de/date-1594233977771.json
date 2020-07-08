@@ -1,0 +1,45 @@
+{
+  "url": "http://milliaoz.com/",
+  "requestedUrl": "http://milliaoz.com/",
+  "timestamp": 1594234200349,
+  "ranks": {
+    "hundos": 1,
+    "performance": 1,
+    "accessibility": 4
+  },
+  "lighthouse": {
+    "version": "6.1.1",
+    "performance": 0.98,
+    "accessibility": 0.7,
+    "bestPractices": 0.77,
+    "seo": 1,
+    "total": 345
+  },
+  "firstContentfulPaint": 1552.1970000000001,
+  "speedIndex": 1801.3054194396325,
+  "largestContentfulPaint": 2263.7349999999997,
+  "totalBlockingTime": 80.5,
+  "cumulativeLayoutShift": 0,
+  "timeToInteractive": 2720.5275,
+  "maxPotentialFirstInputDelay": 115,
+  "timeToFirstByte": 23.221,
+  "weight": {
+    "summary": "22 requests • 216 KiB",
+    "total": 220687,
+    "image": 97181,
+    "imageCount": 4,
+    "script": 81447,
+    "scriptCount": 13,
+    "document": 2157,
+    "font": 31063,
+    "fontCount": 1,
+    "stylesheet": 8839,
+    "stylesheetCount": 3,
+    "thirdParty": 97564,
+    "thirdPartyCount": 8
+  },
+  "axe": {
+    "passes": 116,
+    "violations": 9
+  }
+}

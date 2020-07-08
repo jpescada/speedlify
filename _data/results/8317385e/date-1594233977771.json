@@ -1,0 +1,45 @@
+{
+  "url": "https://anaemiliasilva.com/",
+  "requestedUrl": "https://anaemiliasilva.com/",
+  "timestamp": 1594234205034,
+  "ranks": {
+    "hundos": 3,
+    "performance": 2,
+    "accessibility": 3
+  },
+  "lighthouse": {
+    "version": "6.1.1",
+    "performance": 0.85,
+    "accessibility": 0.77,
+    "bestPractices": 0.69,
+    "seo": 0.93,
+    "total": 324
+  },
+  "firstContentfulPaint": 1922.161,
+  "speedIndex": 2193.058118015194,
+  "largestContentfulPaint": 4137.909,
+  "totalBlockingTime": 141,
+  "cumulativeLayoutShift": 0,
+  "timeToInteractive": 3333.271,
+  "maxPotentialFirstInputDelay": 298,
+  "timeToFirstByte": 24.124999999999986,
+  "weight": {
+    "summary": "17 requests • 453 KiB",
+    "total": 464083,
+    "image": 313654,
+    "imageCount": 5,
+    "script": 110235,
+    "scriptCount": 4,
+    "document": 4017,
+    "font": 22647,
+    "fontCount": 3,
+    "stylesheet": 13530,
+    "stylesheetCount": 4,
+    "thirdParty": 460066,
+    "thirdPartyCount": 16
+  },
+  "axe": {
+    "passes": 266,
+    "violations": 32
+  }
+}
