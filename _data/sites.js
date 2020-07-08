@@ -1,6 +1,6 @@
 module.exports = {
-	joaopescada: {
-		name: "joaopescada", // optional, falls back to object key
+	personal: {
+		name: "personal", // optional, falls back to object key
 		description: "Personal web site",
 		options: {
 			frequency: 60 * 24, // 24 hours
@@ -8,7 +8,6 @@ module.exports = {
 		},
 		urls: [
 			"https://joaopescada.com/",
-			"https://joaopescada.com/about/",
 			"https://joaopescada.com/works/",
 			"https://joaopescada.com/articles/"
 		]
@@ -27,9 +26,9 @@ module.exports = {
 			"https://yummelier.com/behind-the-scenes/"
 		]
 	},
-	terabox: {
-		name: "terabox", // optional, falls back to object key
-		description: "Terabox hosted sites",
+	hosted: {
+		name: "Hosted", // optional, falls back to object key
+		description: "Hosted sites",
 		options: {
 			frequency: 60 * 24, // 24 hours
 			// if the sites don’t share assets on the same domain, we can reset
@@ -41,7 +40,7 @@ module.exports = {
 			"https://filhosdelondres.com/",
 			"https://temppo.com/",
 			"https://ilustrique.com/",
-			"https://milliaoz.com/",
+			"http://milliaoz.com/",
 			"https://suprasumo.co/",
 			"https://mariabaixinha.com/"
 		]
