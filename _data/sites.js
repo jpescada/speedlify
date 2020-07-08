@@ -8,14 +8,9 @@ module.exports = {
 		},
 		urls: [
 			"https://joaopescada.com/",
-			"https://joaopescada.com/agencies/",
-			"https://joaopescada.com/startups/",
-			"https://joaopescada.com/products/",
-			"https://joaopescada.com/works/",
-			"https://joaopescada.com/articles/",
 			"https://joaopescada.com/about/",
-			"https://joaopescada.com/contact/",
-			"https://joaopescada.com/reading/"
+			"https://joaopescada.com/works/",
+			"https://joaopescada.com/articles/"
 		]
 	},
 	yummelier: {
