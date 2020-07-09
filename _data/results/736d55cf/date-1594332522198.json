@@ -1,0 +1,45 @@
+{
+  "url": "https://filhosdelondres.com/",
+  "requestedUrl": "https://filhosdelondres.com/",
+  "timestamp": 1594332698420,
+  "ranks": {
+    "hundos": 1,
+    "performance": 3,
+    "accessibility": 1
+  },
+  "lighthouse": {
+    "version": "6.1.1",
+    "performance": 0.82,
+    "accessibility": 0.9,
+    "bestPractices": 0.85,
+    "seo": 0.86,
+    "total": 343
+  },
+  "firstContentfulPaint": 2453.094,
+  "speedIndex": 5880.0608079546855,
+  "largestContentfulPaint": 2633.798,
+  "totalBlockingTime": 260,
+  "cumulativeLayoutShift": 0,
+  "timeToInteractive": 5357.5779999999995,
+  "maxPotentialFirstInputDelay": 416,
+  "timeToFirstByte": 1530.841,
+  "weight": {
+    "summary": "68 requests • 1,060 KiB",
+    "total": 1085817,
+    "image": 558812,
+    "imageCount": 9,
+    "script": 163212,
+    "scriptCount": 36,
+    "document": 16609,
+    "font": 262803,
+    "fontCount": 3,
+    "stylesheet": 84381,
+    "stylesheetCount": 19,
+    "thirdParty": 23616,
+    "thirdPartyCount": 9
+  },
+  "axe": {
+    "passes": 906,
+    "violations": 90
+  }
+}

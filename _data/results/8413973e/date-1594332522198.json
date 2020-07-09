@@ -1,0 +1,45 @@
+{
+  "url": "https://mariabaixinha.com/",
+  "requestedUrl": "https://mariabaixinha.com/",
+  "timestamp": 1594332816773,
+  "ranks": {
+    "hundos": 1,
+    "performance": 1,
+    "accessibility": 1
+  },
+  "lighthouse": {
+    "version": "6.1.1",
+    "performance": 0.98,
+    "accessibility": 0.94,
+    "bestPractices": 0.92,
+    "seo": 1,
+    "total": 384
+  },
+  "firstContentfulPaint": 852.453,
+  "speedIndex": 1246.1749180185316,
+  "largestContentfulPaint": 2318.2340000000004,
+  "totalBlockingTime": 7.5,
+  "cumulativeLayoutShift": 0,
+  "timeToInteractive": 1735.3435,
+  "maxPotentialFirstInputDelay": 62,
+  "timeToFirstByte": 23.664,
+  "weight": {
+    "summary": "7 requests • 2,148 KiB",
+    "total": 2200051,
+    "image": 2114704,
+    "imageCount": 3,
+    "script": 82663,
+    "scriptCount": 3,
+    "document": 2684,
+    "font": 0,
+    "fontCount": 0,
+    "stylesheet": 0,
+    "stylesheetCount": 0,
+    "thirdParty": 2197367,
+    "thirdPartyCount": 6
+  },
+  "axe": {
+    "passes": 43,
+    "violations": 1
+  }
+}

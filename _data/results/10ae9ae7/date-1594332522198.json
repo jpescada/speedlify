@@ -1,0 +1,45 @@
+{
+  "url": "https://temppo.com/",
+  "requestedUrl": "https://temppo.com/",
+  "timestamp": 1594332679071,
+  "ranks": {
+    "hundos": 2,
+    "performance": 2,
+    "accessibility": 2
+  },
+  "lighthouse": {
+    "version": "6.1.1",
+    "performance": 0.92,
+    "accessibility": 0.75,
+    "bestPractices": 0.92,
+    "seo": 0.87,
+    "total": 346
+  },
+  "firstContentfulPaint": 1944.07,
+  "speedIndex": 2181.925424008965,
+  "largestContentfulPaint": 3189.9125000000004,
+  "totalBlockingTime": 16,
+  "cumulativeLayoutShift": 0,
+  "timeToInteractive": 2569.9365,
+  "maxPotentialFirstInputDelay": 138.5,
+  "timeToFirstByte": 23.62100000000001,
+  "weight": {
+    "summary": "24 requests • 717 KiB",
+    "total": 733706,
+    "image": 561681,
+    "imageCount": 14,
+    "script": 23220,
+    "scriptCount": 2,
+    "document": 3845,
+    "font": 114945,
+    "fontCount": 4,
+    "stylesheet": 30015,
+    "stylesheetCount": 3,
+    "thirdParty": 729861,
+    "thirdPartyCount": 23
+  },
+  "axe": {
+    "passes": 231,
+    "violations": 15
+  }
+}
