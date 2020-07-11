@@ -1,0 +1,45 @@
+{
+  "url": "https://joaopescada.com/articles/",
+  "requestedUrl": "https://joaopescada.com/articles/",
+  "timestamp": 1594429576513,
+  "ranks": {
+    "hundos": 1,
+    "performance": 1,
+    "accessibility": 3
+  },
+  "lighthouse": {
+    "version": "6.1.1",
+    "performance": 0.98,
+    "accessibility": 0.99,
+    "bestPractices": 1,
+    "seo": 1,
+    "total": 397
+  },
+  "firstContentfulPaint": 1273.668,
+  "speedIndex": 1678.7973995075242,
+  "largestContentfulPaint": 1676.9654999999998,
+  "totalBlockingTime": 210.52150000000006,
+  "cumulativeLayoutShift": 0,
+  "timeToInteractive": 3512.5324999999993,
+  "maxPotentialFirstInputDelay": 172,
+  "timeToFirstByte": 54.18100000000001,
+  "weight": {
+    "summary": "55 requests • 348 KiB",
+    "total": 356167,
+    "image": 55162,
+    "imageCount": 5,
+    "script": 139502,
+    "scriptCount": 13,
+    "document": 34987,
+    "font": 90137,
+    "fontCount": 6,
+    "stylesheet": 600,
+    "stylesheetCount": 1,
+    "thirdParty": 19073,
+    "thirdPartyCount": 2
+  },
+  "axe": {
+    "passes": 433,
+    "violations": 7
+  }
+}
