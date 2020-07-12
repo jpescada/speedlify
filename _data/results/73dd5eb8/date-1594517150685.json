@@ -1,0 +1,45 @@
+{
+  "url": "https://yummelier.com/behind-the-scenes/",
+  "requestedUrl": "https://yummelier.com/behind-the-scenes/",
+  "timestamp": 1594517276248,
+  "ranks": {
+    "hundos": 2,
+    "performance": 2,
+    "accessibility": 2
+  },
+  "lighthouse": {
+    "version": "6.1.1",
+    "performance": 0.97,
+    "accessibility": 0.97,
+    "bestPractices": 0.92,
+    "seo": 1,
+    "total": 386
+  },
+  "firstContentfulPaint": 1666.906,
+  "speedIndex": 1666.906,
+  "largestContentfulPaint": 2566.906,
+  "totalBlockingTime": 96.5,
+  "cumulativeLayoutShift": 0,
+  "timeToInteractive": 2059.906,
+  "maxPotentialFirstInputDelay": 243,
+  "timeToFirstByte": 25.834999999999994,
+  "weight": {
+    "summary": "27 requests • 314 KiB",
+    "total": 321930,
+    "image": 60532,
+    "imageCount": 8,
+    "script": 111991,
+    "scriptCount": 9,
+    "document": 8699,
+    "font": 31840,
+    "fontCount": 1,
+    "stylesheet": 1261,
+    "stylesheetCount": 1,
+    "thirdParty": 1261,
+    "thirdPartyCount": 1
+  },
+  "axe": {
+    "passes": 493,
+    "violations": 42
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "url": "https://ilustrique.com/en",
+  "requestedUrl": "https://ilustrique.com/",
+  "timestamp": 1594517439659,
+  "ranks": {
+    "hundos": 2,
+    "performance": 2,
+    "accessibility": 3
+  },
+  "lighthouse": {
+    "version": "6.1.1",
+    "performance": 0.8,
+    "accessibility": 0.83,
+    "bestPractices": 0.85,
+    "seo": 1,
+    "total": 348
+  },
+  "firstContentfulPaint": 1715.2640000000001,
+  "speedIndex": 2268.7737725106203,
+  "largestContentfulPaint": 3682.924,
+  "totalBlockingTime": 444.9999999999998,
+  "cumulativeLayoutShift": 0,
+  "timeToInteractive": 4185.6695,
+  "maxPotentialFirstInputDelay": 216,
+  "timeToFirstByte": 24.400000000000002,
+  "weight": {
+    "summary": "38 requests • 1,265 KiB",
+    "total": 1295405,
+    "image": 1070121,
+    "imageCount": 26,
+    "script": 145087,
+    "scriptCount": 4,
+    "document": 6591,
+    "font": 66996,
+    "fontCount": 2,
+    "stylesheet": 5508,
+    "stylesheetCount": 2,
+    "thirdParty": 1229343,
+    "thirdPartyCount": 33
+  },
+  "axe": {
+    "passes": 494,
+    "violations": 11
+  }
+}
