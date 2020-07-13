@@ -2,11 +2,13 @@ require("dotenv").config();
 const fs = require("fs").promises;
 const shortHash = require("short-hash");
 const fetch = require("node-fetch");
+const fastglob = require("fast-glob");
 const PerfLeaderboard = require("performance-leaderboard");
 
 const NUMBER_OF_RUNS = 3;
 const FREQUENCY = 60; // in minutes
-const BUILD_HOOK_TRIGGER_URL = process.env.BUILD_HOOK_TRIGGER_URL;
+const NETLIFY_MAX_LIMIT = 15; // in minutes, netlify limit
+const ESTIMATED_MAX_TIME_PER_TEST = 0.75; // in minutes, estimate based on looking at past builds
 
 const prettyTime = (seconds) => {
 	// Based on https://johnresig.com/blog/javascript-pretty-date/
@@ -24,8 +26,27 @@ const prettyTime = (seconds) => {
 	);
 }
 
+async function maybeTriggerAnotherNetlifyBuild(dateTestsStarted, numberOfUrls) {
+	let minutesRemaining = NETLIFY_MAX_LIMIT - (Date.now() - dateTestsStarted)/(1000*60)
+	// Use build hook to trigger another build if we’re nearing the 15 minute limit
+	if(process.env.CONTEXT &&
+		process.env.CONTEXT === "production" &&
+		NETLIFY_MAX_LIMIT &&
+		minutesRemaining < numberOfUrls * ESTIMATED_MAX_TIME_PER_TEST) {
+		console.log( `run-tests has about ${minutesRemaining} minutes left, but the next run has ${numberOfUrls} urls. Saving it for the next build.` );
+		return true;
+	}
+	return false;
+}
+
 (async function() {
-	let today = Date.now();
+	// Netlify specific check (works fine without this env variable too)
+	if(process.env.CONTEXT && process.env.CONTEXT !== "production") {
+		console.log( "Skipping all test runs because we’re in a Netlify build or deploy preview!" );
+		return;
+	}
+
+	let dateTestsStarted = Date.now();
 	let dataDir = `./_data/`;
 	// Careful here, this filename needs to be .gitignore’d and
 	// listed in the keep-data-cache plugin.
@@ -33,33 +54,40 @@ const prettyTime = (seconds) => {
 	let lastRuns;
 	try {
 		lastRuns = require(lastRunsFilename);
+		console.log( "Last runs at start: ", JSON.stringify(lastRuns) );
 	} catch (e) {
 		console.log(`There are no known last run timestamps`);
 		lastRuns = {};
 	}
 
-	let groups = require("./_data/sites.js");
-	for(let key in groups) {
-		if(Date.now() - today > 1000 * 60 * 8) {
-			console.log( "run-tests has been running for longer than 8 minutes, saving future test runs for the next build." );
-			if(BUILD_HOOK_TRIGGER_URL) {
-				console.log( "Trying to trigger another build using a build hook." );
-				let res = await fetch(BUILD_HOOK_TRIGGER_URL, { method: 'POST', body: '{}' })
-				console.log( await res.text() );
-			}
-			break;
+	let verticals = await fastglob("./_data/sites/*.js", {
+		caseSensitiveMatch: false
+	});
+
+	for(let file of verticals) {
+		let group = require(file);
+		let key = file.split("/").pop().replace(/\.js$/, "");
+
+		if(await maybeTriggerAnotherNetlifyBuild(dateTestsStarted, group.urls.length)) {
+			// stop everything
+			return;
 		}
 
-		let group = groups[key];
+		if(group.skip) {
+			console.log( `Skipping ${key} (you told me to in your site config)` );
+			continue;
+		}
+
 		let runFrequency =
 			group.options && group.options.frequency
 				? group.options.frequency
 				: FREQUENCY;
+
 		if (!lastRuns[key]) {
 			console.log(`First tests for ${key}.`);
 		} else {
 			const lastRun = lastRuns[key];
-			const lastRunSecondsAgo = (today - lastRun.timestamp) / 1000;
+			const lastRunSecondsAgo = (dateTestsStarted - lastRun.timestamp) / 1000;
 			const lastRunSecondsAgoPretty = prettyTime(lastRunSecondsAgo);
 			const lastRunMinutesAgo = lastRunSecondsAgo / 60;
 			if (lastRunMinutesAgo < runFrequency) {
@@ -85,7 +113,7 @@ const prettyTime = (seconds) => {
 		for(let result of results) {
 			let id = shortHash(result.url);
 			let dir = `${dataDir}results/${id}/`;
-			let filename = `${dir}date-${today}.json`;
+			let filename = `${dir}date-${dateTestsStarted}.json`;
 			await fs.mkdir(dir, { recursive: true });
 			promises.push(fs.writeFile(filename, JSON.stringify(result, null, 2)));
 			console.log( `Writing ${filename}.` );
@@ -94,8 +122,9 @@ const prettyTime = (seconds) => {
 		await Promise.all(promises);
 		lastRuns[key] = { timestamp: Date.now() };
 		console.log( `Finished testing "${key}".` );
-	}
 
-	// Write the last run time to avoid re-runs
-	await fs.writeFile(lastRunsFilename, JSON.stringify(lastRuns, null, 2));
+		// Write the last run time to avoid re-runs
+		await fs.writeFile(lastRunsFilename, JSON.stringify(lastRuns, null, 2));
+		console.log( `Last runs after "${key}":`, JSON.stringify(lastRuns) );
+	}
 })();
