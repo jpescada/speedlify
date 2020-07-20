@@ -15,7 +15,7 @@ npm run start
 
 ## Deploy to Netlify
 
-Can run directly on Netlify (including your tests) and will save the results to a local cache (via Netlify Build Plugins, see `plugins/keep-data-cache/`).
+Can run directly on Netlify (including your tests) and will save the results to a Netlify build cache (via Netlify Build Plugins, see `plugins/keep-data-cache/`).
 
 Speedlify will also save your data to [`/results.zip`](https://jpescada-speedlify.netlify.app/results.zip) so that you can download later. This serves as a fallback backup mechanism in case your Netlify cache gets blown away. Just look up your previous build URL and download the data to restore.
 

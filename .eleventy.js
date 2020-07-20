@@ -1,4 +1,4 @@
-const prettyBytes = require("pretty-bytes");
+const byteSize = require("byte-size");
 const shortHash = require("short-hash");
 const lodash = require("lodash");
 const getObjectKey = require("./utils/getObjectKey.js");
@@ -18,14 +18,20 @@ function pad(num) {
 
 function mapProp(prop, targetObj) {
 	if(Array.isArray(prop)) {
+		let otherprops = [];
 		prop =  prop.map(entry => {
+			// TODO this only works as the first entry
 			if(entry === ":lastkey") {
-				let ret;
-				for(let key in targetObj) {
-					ret = key;
+				entry = Object.keys(targetObj).sort().pop();
+			} else if(entry.indexOf("||") > -1) {
+				for(let key of entry.split("||")) {
+					if(lodash.get(targetObj, [...otherprops, key])) {
+						entry = key;
+						break;
+					}
 				}
-				return ret;
 			}
+			otherprops.push(entry);
 
 			return entry;
 		});
@@ -83,7 +89,10 @@ module.exports = function(eleventyConfig) {
 	});
 
 	eleventyConfig.addFilter("displayFilesize", function(size) {
-		return prettyBytes(size);
+		let normalizedSize = byteSize(size, { units: 'iec', precision: 0 });
+		let unit = normalizedSize.unit;
+		let value = normalizedSize.value;
+		return `<span class="filesize">${value}<span class="filesize-label-sm">${unit.substr(0,1)}</span><span class="filesize-label-lg"> ${unit}</span></span>`;
 	});
 
 	eleventyConfig.addFilter("displayDate", function(timestamp) {
