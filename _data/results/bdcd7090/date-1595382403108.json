@@ -1,0 +1,45 @@
+{
+  "url": "https://catarinacoelho.pt/",
+  "requestedUrl": "https://catarinacoelho.pt/",
+  "timestamp": 1595382730222,
+  "ranks": {
+    "hundos": 3,
+    "performance": 3,
+    "accessibility": 2
+  },
+  "lighthouse": {
+    "version": "6.1.1",
+    "performance": 0.55,
+    "accessibility": 0.87,
+    "bestPractices": 0.85,
+    "seo": 0.91,
+    "total": 318
+  },
+  "firstContentfulPaint": 2352.558,
+  "speedIndex": 6216.945395897761,
+  "largestContentfulPaint": 13881.783,
+  "totalBlockingTime": 105.50000000000023,
+  "cumulativeLayoutShift": 0.6600224066840278,
+  "timeToInteractive": 6005.338000000002,
+  "maxPotentialFirstInputDelay": 229,
+  "timeToFirstByte": 40.572,
+  "weight": {
+    "summary": "42 requests • 6,520 KiB",
+    "total": 6676251,
+    "image": 6306772,
+    "imageCount": 16,
+    "script": 251231,
+    "scriptCount": 12,
+    "document": 14491,
+    "font": 51508,
+    "fontCount": 2,
+    "stylesheet": 52249,
+    "stylesheetCount": 11,
+    "thirdParty": 6419637,
+    "thirdPartyCount": 27
+  },
+  "axe": {
+    "passes": 330,
+    "violations": 14
+  }
+}
