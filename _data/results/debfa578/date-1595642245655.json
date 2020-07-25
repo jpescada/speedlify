@@ -1,0 +1,45 @@
+{
+  "url": "https://suprasumo.co/",
+  "requestedUrl": "https://suprasumo.co/",
+  "timestamp": 1595642403633,
+  "ranks": {
+    "hundos": 1,
+    "performance": 1,
+    "accessibility": 1
+  },
+  "lighthouse": {
+    "version": "6.1.1",
+    "performance": 1,
+    "accessibility": 1,
+    "bestPractices": 1,
+    "seo": 1,
+    "total": 400
+  },
+  "firstContentfulPaint": 866.2280000000001,
+  "speedIndex": 1109.8485680381577,
+  "largestContentfulPaint": 866.2280000000001,
+  "totalBlockingTime": 159,
+  "cumulativeLayoutShift": 0,
+  "timeToInteractive": 1670.342,
+  "maxPotentialFirstInputDelay": 172,
+  "timeToFirstByte": 22.164000000000016,
+  "weight": {
+    "summary": "8 requests • 42 KiB",
+    "total": 43379,
+    "image": 196,
+    "imageCount": 1,
+    "script": 30156,
+    "scriptCount": 3,
+    "document": 1597,
+    "font": 9500,
+    "fontCount": 1,
+    "stylesheet": 1930,
+    "stylesheetCount": 2,
+    "thirdParty": 29772,
+    "thirdPartyCount": 4
+  },
+  "axe": {
+    "passes": 24,
+    "violations": 3
+  }
+}
