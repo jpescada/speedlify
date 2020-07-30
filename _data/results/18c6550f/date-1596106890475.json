@@ -1,0 +1,45 @@
+{
+  "url": "https://yummelier.com/",
+  "requestedUrl": "https://yummelier.com/",
+  "timestamp": 1596107019050,
+  "ranks": {
+    "hundos": 1,
+    "performance": 1,
+    "accessibility": 1
+  },
+  "lighthouse": {
+    "version": "6.1.1",
+    "performance": 1,
+    "accessibility": 1,
+    "bestPractices": 1,
+    "seo": 1,
+    "total": 400
+  },
+  "firstContentfulPaint": 968.8820000000001,
+  "speedIndex": 968.8820000000001,
+  "largestContentfulPaint": 1942.429,
+  "totalBlockingTime": 10.5,
+  "cumulativeLayoutShift": 0,
+  "timeToInteractive": 1281.824,
+  "maxPotentialFirstInputDelay": 71,
+  "timeToFirstByte": 23.924999999999997,
+  "weight": {
+    "summary": "15 requests • 167 KiB",
+    "total": 170724,
+    "image": 94055,
+    "imageCount": 4,
+    "script": 71885,
+    "scriptCount": 9,
+    "document": 3543,
+    "font": 0,
+    "fontCount": 0,
+    "stylesheet": 1241,
+    "stylesheetCount": 1,
+    "thirdParty": 1241,
+    "thirdPartyCount": 1
+  },
+  "axe": {
+    "passes": 70,
+    "violations": 1
+  }
+}
