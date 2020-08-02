@@ -1,0 +1,45 @@
+{
+  "url": "https://tidykingdom.com/",
+  "requestedUrl": "https://tidykingdom.com/",
+  "timestamp": 1596394079684,
+  "ranks": {
+    "hundos": 4,
+    "performance": 4,
+    "accessibility": 2
+  },
+  "lighthouse": {
+    "version": "6.1.1",
+    "performance": 0.55,
+    "accessibility": 0.88,
+    "bestPractices": 0.77,
+    "seo": 0.83,
+    "total": 303
+  },
+  "firstContentfulPaint": 2485.4719999999998,
+  "speedIndex": 5683.506251456149,
+  "largestContentfulPaint": 7134.450000000001,
+  "totalBlockingTime": 146.5,
+  "cumulativeLayoutShift": 0,
+  "timeToInteractive": 11931.299999999996,
+  "maxPotentialFirstInputDelay": 261,
+  "timeToFirstByte": 30.102999999999994,
+  "weight": {
+    "summary": "64 requests • 3,891 KiB",
+    "total": 3984789,
+    "image": 3677350,
+    "imageCount": 12,
+    "script": 115005,
+    "scriptCount": 30,
+    "document": 16543,
+    "font": 110218,
+    "fontCount": 4,
+    "stylesheet": 65288,
+    "stylesheetCount": 16,
+    "thirdParty": 1742904,
+    "thirdPartyCount": 36
+  },
+  "axe": {
+    "passes": 992,
+    "violations": 137
+  }
+}
