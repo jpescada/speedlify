@@ -10,7 +10,8 @@
     "start": "npx @11ty/eleventy --quiet --serve",
     "zip-results": "node zip-results.js",
     "build-production": "npm run test-pages && npm run build && npm run zip-results",
-    "deploy": "netlify build && netlify deploy --prod"
+    "netlify-build": "netlify build",
+    "netlify-deploy": "netlify deploy --prod"
   },
   "keywords": [
     "performance",
